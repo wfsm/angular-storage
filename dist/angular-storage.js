@@ -50,9 +50,10 @@ angular.module('angular-storage.internalStore', ['angular-storage.localStorage',
       this.storage.set(this.getNamespacedKey(name), JSON.stringify(elem));
     };
 
-    InternalStore.prototype.get = function(name) {
+    InternalStore.prototype.get = function(name,cached) {
+      cached=cached || true;
       var obj = null;
-      if (name in this.inMemoryCache) {
+      if (cached && (name in this.inMemoryCache)) {
         return this.inMemoryCache[name];
       }
       var saved = this.storage.get(this.getNamespacedKey(name));
