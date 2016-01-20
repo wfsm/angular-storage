@@ -51,7 +51,9 @@ angular.module('angular-storage.internalStore', ['angular-storage.localStorage',
     };
 
     InternalStore.prototype.get = function(name,cached) {
-      cached=cached || true;
+      if(cached===undefined){
+          cached=true;
+      }
       var obj = null;
       if (cached && (name in this.inMemoryCache)) {
         return this.inMemoryCache[name];
