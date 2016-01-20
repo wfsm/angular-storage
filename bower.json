@@ -1,10 +1,14 @@
 {
-  "name": "a0-angular-storage",
-  "version": "0.0.13",
+  "name": "mb-angular-storage",
+  "version": "0.0.14",
   "authors": [
     {
       "name": "Martin Gontovnikas",
       "email": "martin@gon.to"
+    },
+    {
+      "name": "Wang Lei",
+      "email": "wanglei@mongobooster.com"  
     }
   ],
   "main": [
